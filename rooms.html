@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Ashwood</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="./css/styles.css" rel="stylesheet" />
+    <link href="./css/innerPageStyles.css" rel="stylesheet" />
+    <link rel="icon" href="./Assets/logo_tab.png" type="image/x-icon" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top ps-sm-5 pe-sm-5 position-static" data-bs-theme="dark"
+            style="background-color: #131818">
+            <div class="container-fluid mt-3 mb-3 column-gap-lg-3">
+                <a class="navbar-brand order-lg-1" href="./index.html">
+                    <img src="./Assets/logo.jpg" alt="The Ashwood Logo" height="48" />
+                </a>
+                <a class="btn btn-outline-light me-3 order-lg-3" type="button"
+                    href="https://app.inn-connect.com/book2/?curr=CAD&lang=en&p=The%20Ashwood%20Inn">Book Now
+                </a>
+                <div class="collapse navbar-collapse order-lg-2" id="navbarTogglerDemo03">
+                    <div class="navbar-nav column-gap-4">
+                        <a class="nav-link" href="./index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="./rooms.html">Rooms</a>
+                        <a class="nav-link" href="./gallery.html">Gallery</a>
+                        <a class="nav-link" href="./contact.html">Contact Us</a>
+                        <a class="nav-link" href="./process.html">Process Page</a>
+                    </div>
+                </div>
+
+                <button class="navbar-toggler order-first " type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid" style="background-color: #131818">
+        <div class="row align-items-center ps-sm-5 ps-sm-1 row-gap-5">
+            <div class="col-xxl-12 mt-lg-3 justify-content-sm-center align-items-center mb-5 mb-lg-1">
+                <h1 class="display-1 mb-0 text-sm-center ms-1">Rooms</h1>
+                <div class="text-white text-opacity-75 fs-6 ms-1 text-sm-center header-sub">A Space for
+                    Every Need.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class=" container-fluid text-bg-light">
+        <div class="reserve-widget row justify-content-center ">
+            <div class="col-md-10 overlapping-row d-none d-lg-block shadow-lg rounded-5 bg-white">
+                <div class="row ps-5">
+                    <div class="col-3 pe-4 py-5 border-end">
+                        <label for="start-date" class="text-uppercase fs-6 text-success-emphasis">check in</label>
+                        <div class="input-group">
+                            <input id="start-date" class="form-control">
+                            <span class="input-group-text calendar-icon" id="start-date-icon">
+                                <i class="bi bi-calendar4"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-3 px-4 py-5 border-end">
+                        <label for="start-date" class="text-uppercase fs-6 text-success-emphasis">check out</label>
+                        <div class="input-group">
+                            <input id="end-date" class="form-control">
+                            <span class="input-group-text calendar-icon" id="end-date-icon">
+                                <i class="bi bi-calendar4"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-3 px-4 py-5 border-end">
+                        <label for="guestCount" class="text-uppercase fs-6 text-success-emphasis">Guests</label>
+                        <div class="input-group">
+                            <button class="btn btn-outline-success guestBtn rounded-circle me-2"
+                                id="subtract-guest">−</button>
+                            <input type="text" id="guests" class="form-control" value="1" readonly>
+                            <button class="btn btn-outline-success guestBtn rounded-circle ms-2"
+                                id="add-guest">+</button>
+                        </div>
+                    </div>
+                    <div class="col-3 p-xxl-5 align-self-center">
+                        <button class="btn btn-success disabled w-100" onclick="openInNewTab(reserveLinkRtn())"
+                            id="checkAvail">check availability</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- https://getbootstrap.com/docs/5.3/components/navs-tabs/#javascript-behavior -->
+        <div class="room-nav-container container-fluid my-5">
+            <ul class="nav nav-pills mb-5 justify-content-sm-center" id="pills-tab" role="tablist">
+                <li class="nav-item me-2 mb-2" role="presentation">
+                    <button class="nav-link active rounded-5 text-secondary shadow-lg" id="pills-single-tab"
+                        data-bs-toggle="pill" data-bs-target="#pills-single" type="button" role="tab"
+                        aria-controls="pills-single" aria-selected="true">Single Bed</button>
+                </li>
+                <li class="nav-item me-2 mb-2" role="presentation">
+                    <button class="nav-link rounded-5 text-secondary shadow-lg" id="pills-double-tab"
+                        data-bs-toggle="pill" data-bs-target="#pills-double" type="button" role="tab"
+                        aria-controls="pills-double" aria-selected="false">Double Bed</button>
+                </li>
+                <li class="nav-item me-2 mb-2" role="presentation">
+                    <button class="nav-link rounded-5 text-secondary shadow-lg" id="pills-family-tab"
+                        data-bs-toggle="pill" data-bs-target="#pills-family" type="button" role="tab"
+                        aria-controls="pills-family" aria-selected="false">Family Room</button>
+                </li>
+                <li class="nav-item mb-2" role="presentation">
+                    <button class="nav-link rounded-5 text-secondary shadow-lg" id="pills-king-tab"
+                        data-bs-toggle="pill" data-bs-target="#pills-king" type="button" role="tab"
+                        aria-controls="pills-king" aria-selected="false">King Suite</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-single" role="tabpanel"
+                    aria-labelledby="pills-single-tab" tabindex="0">
+                    <div class="card border border-0 mb-3 text-bg-light">
+                        <div class="row g-0 justify-content-center ">
+                            <div class="col-xl-6">
+                                <img src="./Assets/Single.jpg" class="img-fluid rounded-5" alt="...">
+                            </div>
+                            <div class="col-xl-6 ps-xl-5">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bolder mb-4">SINGLE QUEEN ROOM - FROM $189/Night </h5>
+                                    <p class="card-text lh-lg">Travelling alone, or with your partner? The Single
+                                        Queen
+                                        Room is cozy, comfortable and budget friendly.
+                                        <br><br>Sleeps a <mark> maximum of 2 guests </mark>(including adults & children)
+                                        <br>Features <mark> one Queen bed</mark>.
+                                        <br>All rooms offer free wifi, television & bar fridge.
+                                        <br><br>Take a virtual tour of Ashwood's Single Queen Room!
+                                    </p>
+                                    <iframe class="img-fluid" src="https://www.youtube.com/embed/vZDQAs_CYcE"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-double" role="tabpanel" aria-labelledby="pills-double-tab"
+                    tabindex="0">
+                    <div class="card border border-0 mb-3 text-bg-light">
+                        <div class="row g-0 justify-content-center ">
+                            <div class="col-xl-6 ">
+                                <img src="./Assets/double.jpg" class="img-fluid rounded-5" alt="...">
+                            </div>
+                            <div class="col-xl-6 ps-xl-5">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bolder mb-4">DOUBLE QUEEN ROOM - FROM $199/Night</h5>
+                                    <p class="card-text lh-lg">The spacious rooms with two queen sized beds can
+                                        accommodate up to four adults or a medium sized family for a cozy weekend
+                                        staycation or quick getaway from the city life.
+                                        <br><br>Sleeps a <mark>maximum of 4 guests </mark>(including adults & children)
+                                        <br>Features <mark>2 Queen beds</mark>.
+                                        <br>All rooms offer free wifi, television & bar fridge.
+                                        <br><br>Take a virtual tour of our Double Queen Room!
+
+                                    </p>
+                                    <iframe class="img-fluid" src="https://www.youtube.com/embed/rVfxpAxw3Ag"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-family" role="tabpanel" aria-labelledby="pills-family-tab"
+                    tabindex="0">
+                    <div class="card border border-0 mb-3 text-bg-light">
+                        <div class="row g-0 justify-content-center ">
+                            <div class="col-xl-6 ">
+                                <img src="./Assets/family.jpg" class="img-fluid rounded-5" alt="...">
+                            </div>
+                            <div class="col-xl-6 ps-xl-5">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bolder mb-4">FAMILY ROOM - FROM $279/Night</h5>
+                                    <p class="card-text lh-lg">A family favourite and also perfect for a
+                                        crazy weekend escape with the gang! Ashwood's family rooms accommodate up to six
+                                        adults and large families. The cozy loft space is a hit among the kids! The loft
+                                        area is furnished with two queen sized beds.
+                                        <br><br>Sleeps a <mark>maximum of 6 guests </mark>(including adults & children)
+                                        <br>Features one Queen bed on the main floor with two more Queen beds in a loft for a total of <mark>3 Queen beds</mark>.
+                                        Ideal for a larger family or a group of friends looking to share a room.
+                                        <br>All rooms offer free wifi, television & bar fridge.
+                                        <br><br>Take a virtual tour of our Family Room!
+
+                                    </p>
+                                    <iframe class="img-fluid" src="https://www.youtube.com/embed/CHSdsfYiPwg"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-king" role="tabpanel" aria-labelledby="pills-king-tab"
+                    tabindex="0">
+                    <div class="card border border-0 mb-3 text-bg-light">
+                        <div class="row g-0 justify-content-center ">
+                            <div class="col-xl-6 ">
+                                <img src="./Assets/king.jpg" class="img-fluid rounded-5" alt="...">
+                            </div>
+                            <div class="col-xl-6 ps-xl-5">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bolder mb-4">KING ROOM - FROM $209/Night</h5>
+                                    <p class="card-text lh-lg">The Ashwood King Suits offer a budget friendly option for
+                                        a luxurious staycation in the beautiful village of Bayfield. Furnished with all
+                                        holiday essentials the rooms also feature a private access to the gardens.
+                                        <br><br>Sleeps a <mark>maximum of 2 guests</mark> (including adults & children)
+                                        <br>Features <mark>one King bed </mark>in a spacious room with sitting area.
+                                        <br>All rooms offer free wifi, television & bar fridge.
+                                        <br><br>Take a virtual tour of our King Suite!
+
+                                    </p>
+                                    <iframe class="img-fluid" src="https://www.youtube.com/embed/CHSdsfYiPwg"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer mt-1 py-3 bg-dark ">
+        <div class="container row ms-sm-5 align-items-center text-center">
+            <div class="col-sm-12 mt-2 mt-xxl-0">
+                <a class="fs-5 mb-1 ms-5 text-white text-decoration-none" href="https://www.instagram.com/theashwoodinn/">
+                    <i class="bi bi-instagram"></i>&emsp;
+                </a>
+                <a class="fs-5 mb-1 text-white text-decoration-none" href="https://www.facebook.com/theashwood/">
+                    <i class="bi bi-facebook"></i>&emsp;
+                </a>
+                <a class="fs-5 mb-1 text-white text-decoration-none" href="https://www.youtube.com/channel/UCCQ2JT4S5HCazhhFbE55nNA/videos">
+                    <i class="bi bi-youtube"></i>&emsp;
+                </a>
+
+                <span class="text-white">&emsp;&emsp;Created by Sneh Patel with
+                    <a class="text-white" href="https://getbootstrap.com">Bootstrap</a>.
+                    Icons via
+                    <a class="text-white" href="https://icons.getbootstrap.com/">Bootstrap Icons</a>.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

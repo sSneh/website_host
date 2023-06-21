@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Ashwood</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="./css/styles.css" rel="stylesheet" />
+    <link rel="icon" href="./Assets/logo_tab.png" type="image/x-icon" />
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+
+
+
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top ps-sm-5 pe-sm-5 position-absolute" data-bs-theme="dark">
+            <div class="container-fluid mt-3 mb-3 column-gap-lg-3">
+                <a class="navbar-brand order-lg-1" href="./index.html">
+                    <img src="./Assets/logo.jpg" alt="The Ashwood Logo" height="48" />
+                </a>
+                <a class="homebtn btn btn-outline-light me-3 order-lg-3" type="button"
+                    href="https://app.inn-connect.com/book2/?curr=CAD&lang=en&p=The%20Ashwood%20Inn">Book Now
+                </a>
+                <div class="collapse navbar-collapse order-lg-2" id="navbarTogglerDemo03">
+                    <div class="navbar-nav column-gap-4">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        <a class="nav-link" href="./rooms.html">Rooms</a>
+                        <a class="nav-link" href="./gallery.html">Gallery</a>
+                        <a class="nav-link" href="./contact.html">Contact Us</a>
+                        <a class="nav-link" href="./process.html">Process Page</a>
+                    </div>
+                </div>
+
+                <button class="navbar-toggler order-first " type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid" style="background-color: #131818">
+        <div class="row align-items-center ps-sm-5 ps-1 row-gap-5">
+            <div class="col-xxl-7 mt-xxl-5">
+                <h1 class="display-1 mb-0">Bayfield,<br>Unlocked</h1>
+                <div class="text-white text-opacity-75 fs-5 ms-1 mb-5">Your vacation awaits.</div>
+                <a class="btn btn-light text-nowrap"
+                    href="https://app.inn-connect.com/book2/?curr=CAD&lang=en&p=The%20Ashwood%20Inn">reserve your
+                    stay</a>
+            </div>
+            <div class="col-xxl-5 header-img rounded-start-4 mb-5 mb-lg-0">
+            </div>
+        </div>
+    </div>
+
+    <div class="reserve-widget rw-home container-fluid">
+        <div class="row justify-content-center ">
+            <div class="col-md-10 overlapping-row d-none d-lg-block shadow-lg rounded-5 bg-white">
+                <div class="row ps-5">
+                    <div class="col-3 pe-4 py-5 border-end">
+                        <label for="start-date" class="text-uppercase fs-6 text-success-emphasis">check in</label>
+                        <div class="input-group">
+                            <input id="start-date" class="form-control">
+                            <span class="input-group-text calendar-icon" id="start-date-icon">
+                                <i class="bi bi-calendar4"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-3 px-4 py-5 border-end">
+                        <label for="start-date" class="text-uppercase fs-6 text-success-emphasis">check out</label>
+                        <div class="input-group">
+                            <input id="end-date" class="form-control">
+                            <span class="input-group-text calendar-icon" id="end-date-icon">
+                                <i class="bi bi-calendar4"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-3 px-4 py-5 border-end">
+                        <label for="guestCount" class="text-uppercase fs-6 text-success-emphasis">Guests</label>
+                        <div class="input-group">
+                            <button class="btn btn-outline-success guestBtn rounded-circle me-2"
+                                id="subtract-guest">−</button>
+                            <input type="text" id="guests" class="form-control" value="1" readonly>
+                            <button class="btn btn-outline-success guestBtn rounded-circle ms-2"
+                                id="add-guest">+</button>
+                        </div>
+                    </div>
+                    <div class="col-3 p-xxl-5 align-self-center">
+                        <button class="btn btn-success disabled w-100" onclick="openInNewTab(reserveLinkRtn())"
+                            id="checkAvail">check availability</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center justify-content-center pt-5 mt-5 row-gap-5">
+            <div class="col-xxl-5 col-xl-6 col-sm-8 m-5 p-5 text-center">
+                <div class="text-white text-uppercase text-opacity-75 fs-5 ms-1 mb-4">Welcome to the ashwood inn</div>
+                <h1 class="display-3 mb-5">Boutique Accomodation in the Beauitful Town of Bayfield</h1>
+                <div class="text-white text-opacity-75 fs-5 ms-1 mb-5">Nestled at the edge of the picturesque village of
+                    Bayfield on Ontario's West Coast, The Ashwood offers quality bedroom accommodations. Visitors to The
+                    Ashwood will experience the bliss of Bayfield's natural beauty. Come for our fantastic sunsets and
+                    stay for the incredible experience.</div>
+                <div class="buttons-container mb-5">
+                    <a class="btn btn-outline-light text-nowrap me-2" href="./gallery.html">View gallery
+                    </a>
+                    <a class="ms-2 btn btn-light text-nowrap"
+                        href="https://app.inn-connect.com/book2/?curr=CAD&lang=en&p=The%20Ashwood%20Inn">book now</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid rounded-top-5 overlapping-row mb-5" style="background-color: #fff; margin-top: -30px">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-12 mt-5 p-5 text-center">
+                <h1 class="display-3 mt-3 text-black">Your Vacation Awaits</h1>
+            </div>
+            <div class="card-container col-12 row justify-content-center column-gap-5 row-gap-5 px-5 pb-5">
+                <a class="card border border-0 col-lg-3 text-decoration-none" href="./rooms.html">
+                    <img class="card-img-top rounded-5" src="./Assets/king_thumb.jpg" alt="King suite">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bolder">Rooms & Suites</h5>
+                    </div>
+                </a>
+                <a class="card border border-0 col-lg-3 text-decoration-none" href="#">
+                    <img class="card-img-top rounded-5" src="./Assets/bar.jpg" alt="Bar">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bolder">Food & Drinks</h5>
+                    </div>
+                </a>
+                <a class="card border border-0 col-lg-3 text-decoration-none" href="#">
+                    <img class="card-img-top rounded-5" src="./Assets/relax.png" alt="Relax">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bolder">Relax & Explore</h5>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-1 py-3 bg-dark ">
+        <div class="container row ms-sm-5 align-items-center text-center">
+            <div class="col-sm-12 mt-2 mt-xxl-0">
+                <a class="fs-5 mb-1 ms-5 text-white text-decoration-none" href="https://www.instagram.com/theashwoodinn/">
+                    <i class="bi bi-instagram"></i>&emsp;
+                </a>
+                <a class="fs-5 mb-1 text-white text-decoration-none" href="https://www.facebook.com/theashwood/">
+                    <i class="bi bi-facebook"></i>&emsp;
+                </a>
+                <a class="fs-5 mb-1 text-white text-decoration-none" href="https://www.youtube.com/channel/UCCQ2JT4S5HCazhhFbE55nNA/videos">
+                    <i class="bi bi-youtube"></i>&emsp;
+                </a>
+
+                <span class="text-white">&emsp;&emsp;Created by Sneh Patel with
+                    <a class="text-white" href="https://getbootstrap.com">Bootstrap</a>.
+                    Icons via
+                    <a class="text-white" href="https://icons.getbootstrap.com/">Bootstrap Icons</a>.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
+
+
+
+
+</body>
+
+</html>

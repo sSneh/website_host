@@ -1,0 +1,169 @@
+@font-face {
+    font-family: 'Avenir Reg';
+    src: url(../Assets/Fonts/AvenirNextLTPro-Regular.otf);
+}
+
+@font-face {
+    font-family: 'Lucky Beauty';
+    src: url(../Assets/Fonts/Lucky\ Beauty.ttf);
+}
+
+@font-face {
+    font-family: 'Avenir Bold';
+    src: url(../Assets/Fonts/AvenirNextLTPro-Bold.otf);
+}
+
+
+@media (min-width: 1400px) {
+    .navbar .container-fluid .homebtn {
+        background-color: #131818;
+        border: 0;
+    }
+
+    .navbar .container-fluid .homebtn:hover {
+        background-color: #fff;
+    }
+
+    .display-1 {
+        font-size: calc(1.625rem + 4.5vw);
+    }
+
+    .header-img {
+        height: 90vh;
+
+    }
+}
+
+@media (max-width: 1399px) {
+    .navbar {
+        position: unset !important;
+        background-color: #131818;
+    }
+
+    .header-img {
+        height: 1rem;
+    }
+
+    .navbar .container-fluid .btn {
+        padding: .7rem 1rem !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .header-sub {
+        margin-bottom: 125px
+    }
+}
+
+@media (max-width: 992px) {
+    .reserve-widget .overlapping-row {
+        margin-top: 0px !important;
+    }
+
+    .contact-page .overlapping-row, #carouselExampleIndicators {
+        margin-top: -25px !important;
+    }
+}
+
+.header-img {
+    min-height: 400px;
+    background-size: cover;
+    background-image: url('../Assets/homePage-banner.webp');
+    background-position-x: 50%;
+}
+
+body,
+h4 {
+    font-family: 'Avenir Reg';
+}
+
+.btn:not(.guestBtn) {
+    border-radius: 50px !important;
+    padding: 1rem 2rem !important;
+    text-transform: uppercase;
+    font-family: 'Avenir Bold';
+    font-weight: 100;
+    font-size: .75rem;
+    letter-spacing: .2rem;
+}
+
+.navbar-nav {
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: .075rem;
+}
+
+h1 {
+    font-family: 'Lucky Beauty';
+    color: #fff;
+}
+
+.overlapping-row {
+    position: relative;
+    margin-top: -90px;
+}
+
+/* Taken from  https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp
+Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.rw-home {
+    position: relative;
+    min-height: 90vh;
+}
+
+.rw-home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../Assets/property_overview.jpg'), linear-gradient(rgba(0, 0, 0, 0.7), rgb(19, 24, 24, 1));
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(120%);
+    z-index: -1;
+}
+
+.reserve-widget label {
+    font-family: 'Avenir Bold';
+}
+
+.rounded-circle {
+    border: 1px solid;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.nav-item .active {
+    background-color: #131818 !important;
+    color: #fff !important;
+}
+
+.nav-item button:hover:not(.active) {
+    background-color: rgba(34, 58, 58, 0.831) !important;
+    color: #fff !important;
+}
+
+
+/* https://stackoverflow.com/questions/46249541/change-arrow-colors-in-bootstraps-carousel */ 
+/* Just changes the carousel arrows to be more visible */
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}

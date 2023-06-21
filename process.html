@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Ashwood</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="./css/styles.css" rel="stylesheet" />
+    <link rel="icon" href="./Assets/logo_tab.png" type="image/x-icon" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top ps-sm-5 pe-sm-5 position-static" data-bs-theme="dark"
+            style="background-color: #131818">
+            <div class="container-fluid mt-3 mb-3 column-gap-lg-3">
+                <a class="navbar-brand order-lg-1" href="./index.html">
+                    <img src="./Assets/logo.jpg" alt="The Ashwood Logo" height="48" />
+                </a>
+                <a class="btn btn-outline-light me-3 order-lg-3" type="button"
+                    href="https://app.inn-connect.com/book2/?curr=CAD&lang=en&p=The%20Ashwood%20Inn">Book Now
+                </a>
+                <div class="collapse navbar-collapse order-lg-2" id="navbarTogglerDemo03">
+                    <div class="navbar-nav column-gap-4">
+                        <a class="nav-link" href="./index.html">Home</a>
+                        <a class="nav-link" href="./rooms.html">Rooms</a>
+                        <a class="nav-link" href="./gallery.html">Gallery</a>
+                        <a class="nav-link" href="./contact.html">Contact Us</a>
+                        <a class="nav-link active" aria-current="page" href="./process.html">Process Page</a>
+                    </div>
+                </div>
+
+                <button class="navbar-toggler order-first " type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid" style="background-color: #131818">
+        <div class="row align-items-center px-sm-5 row-gap-5">
+            <div class="col-12 mt-3 justify-content-sm-center align-items-center mb-5 mb-lg-1">
+                <h1 class="display-1 mb-3 text-sm-center ms-1">Process Page</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid text-bg-light bg-light">
+        <div class="row justify-content-center contact-page">
+            <div class="col-md-10 col-12 row mt-4 z-1 shadow-lg rounded-5 bg-white">
+                <div class="card border border-0 my-4">
+                    <div class="row g-0 justify-content-center ">
+                        <div class="col-xl-12">
+                            <div class="card-body">
+                                <h2 class="display-7 text-dark text-uppercase border-bottom pb-2 border-dark-subtle">
+                                    rationale and design decisions</h2>
+                                <p class="card-text lh-lg">
+                                    This project was originally meant to be a portfolio website but was changed to a
+                                    hotel website redesign after approval. The original website (which is hosted at
+                                    theashwood.com) was created using squarespace website maker by the hotel owner and
+                                    has a myriad of problems. Some of which are:</p>
+                                <ul>
+                                    <li>
+                                        - It is too complicated for users to find the information that they need</li>
+                                    <li>
+                                        - It lacks direction and purpose</li>
+                                    <li>
+                                        - The website design and the booking portal (managed by another company) have
+                                        completely different designs and are often an area where customers hesitate to
+                                        book
+                                        as they think the site is sketchy and unreliable (this has been a common
+                                        complaint)</li>
+                                    <li>
+                                        - The "Book Now" button is only available on one page of the website and it is
+                                        not
+                                        even at the top, users need to scroll down to find it</li>
+                                    <li>
+                                        - Too many site pages that have no meaningful purpose and because of this lack
+                                        of
+                                        organization there are many broken links</li>
+                                </ul>
+                                <p class="card-text lh-lg">
+                                    This project aimed to fix most of these problems and while most were acknowledged,
+                                    due to time restraints or project requirements, not all problems have been fixed as
+                                    best as they could be. The new site was given a fresh look that is based on this
+                                    Behance mockup : https://www.behance.net/gallery/130697071/The-Clarke-House-Inn
+                                    This is a mockup that I really like and pulled heavy inspiration from (basically
+                                    used it as a reference website for the homepage). While the layout, colour theme,
+                                    and certain phrases were reused, all code was done from scratch and nothing in the
+                                    code (other than those tagged), was taken from other sources.<br><br>
+
+                                    I aimed for the website to make the booking process as painless as possible which
+                                    was accomplished through a consistent header that is reused throughout the website
+                                    and has two areas where the booking portal can be reached. However, the booking
+                                    portal itself was not modified in the version of the website as it is not hosted by
+                                    the hotel and I have no access to its API/backend. This is a future problem. Pages
+                                    like the 'Blog', 'Intro', 'The Ashwood', etc. were either removed, renamed, or
+                                    merged with another heading. This was because these pages provided nothing for the
+                                    user, was poorly named, and didn't encourage the user to book a room (which is
+                                    ultimately the goal of this website).<br><br>
+
+                                    To satisfy the requirements of the assignment (aside from the home page and process
+                                    plan) the page named 'Rooms' incorporates tabular content using Bootstraps Pills to
+                                    shuffle through the 4 different room types. The 'Gallery' Page is self-explanatory
+                                    and uses Bootstrap Carousel to display 6 different images, all of which were taken
+                                    from the original site. The 'Contact Us' Page satisfies the form page requirement
+                                    and incorporates a few input text boxes. And finally, the 'Process Plan' page
+                                    satisfies the Content Heavy page as it is entirely text-dominated.<br><br>
+
+                                    References are cited down below.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid text-bg-light bg-light">
+        <div class="row justify-content-center contact-page">
+            <div class="col-md-10 col-12 row my-4 z-1 shadow-lg rounded-5 bg-white">
+                <div class="card border border-0 my-4">
+                    <div class="row g-0 justify-content-center ">
+                        <div class="col-xl-12">
+                            <div class="card-body">
+                                <h2 class="display-7 text-dark text-uppercase border-bottom pb-2 border-dark-subtle">
+                                    references</h2>
+                                <p class="card-text lh-lg">
+                                    The Ashwood. (n.d.). https://www.theashwood.com/<br><br>
+                                    Bootstrap icons. · Official open source SVG icon library for Bootstrap. (n.d.).
+                                    https://icons.getbootstrap.com/<br><br>
+                                    Open a URL in a new tab (and not a new window). Stack Overflow. (1957, September 1).
+                                    https://stackoverflow.com/questions/4907843/open-a-url-in-a-new-tab-and-not-a-new-window<br><br>
+                                    Prendergast, J. (2021, November 5). The clarke house inn. Behance.
+                                    https://www.behance.net/gallery/130697071/The-Clarke-House-Inn
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-1 py-3 bg-dark ">
+        <div class="container row ms-sm-5 align-items-center text-center">
+            <div class="col-sm-12 mt-2 mt-xxl-0">
+                <a class="fs-5 mb-1 ms-5 text-white text-decoration-none"
+                    href="https://www.instagram.com/theashwoodinn/">
+                    <i class="bi bi-instagram"></i>&emsp;
+                </a>
+                <a class="fs-5 mb-1 text-white text-decoration-none" href="https://www.facebook.com/theashwood/">
+                    <i class="bi bi-facebook"></i>&emsp;
+                </a>
+                <a class="fs-5 mb-1 text-white text-decoration-none"
+                    href="https://www.youtube.com/channel/UCCQ2JT4S5HCazhhFbE55nNA/videos">
+                    <i class="bi bi-youtube"></i>&emsp;
+                </a>
+
+                <span class="text-white">&emsp;&emsp;Created by Sneh Patel with
+                    <a class="text-white" href="https://getbootstrap.com">Bootstrap</a>.
+                    Icons via
+                    <a class="text-white" href="https://icons.getbootstrap.com/">Bootstrap Icons</a>.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
